@@ -1,8 +1,7 @@
 import React from "react";
-import { chakra, Box, Text } from "@chakra-ui/react";
+import { chakra, Box } from "@chakra-ui/react";
 import { v4 as uuid } from "uuid";
 import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
-import { useDispatch } from "react-redux";
 const Pagination = ({
   totalPages,
   ListLoader,
@@ -10,7 +9,6 @@ const Pagination = ({
   setCurrentFun,
   getListFun,
 }) => {
-  const dispatch = useDispatch();
   const handlePageChange = (page, changePage) => {
     if (changePage) {
       setCurrentFun(changePage);
@@ -38,6 +36,9 @@ const Pagination = ({
       p={3}
       py={4}
       alignItems="center"
+      w="90%"
+      m="auto"
+      mt={4}
       boxShadow={"sm"}
       border="0 solid #e5e7eb"
     >
